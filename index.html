@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eirick Kerbi D. Cabardo — IT Portfolio</title>
+<meta name="description" content="Portfolio of Eirick Kerbi D. Cabardo, a BS Information Technology graduate working in full-stack development and cybersecurity.">
+<meta name="theme-color" content="#111111">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Georgia,serif' font-size='11' fill='%23fff'%3EEK%3C/text%3E%3C/svg%3E">
+<script>
+(function () {
+  try {
+    var saved = localStorage.getItem("portfolio-theme");
+    var theme = saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme);
+  } catch (e) {
+    document.documentElement.setAttribute("data-theme", "light");
+  }
+})();
+</script>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <strong>Kerbi Cabardo</strong>
+  <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="sidebar">Menu</button>
+</header>
+<div class="overlay" id="overlay" hidden></div>
+<div class="shell">
+  <aside class="sidebar" id="sidebar">
+    <button class="close" id="close-btn" type="button">Close</button>
+    <div class="brand">
+      <div class="avatar">
+        <img src="assets/images/Cabardo.jpg" alt="Eirick Kerbi D. Cabardo">
+      </div>
+      <p class="logo">Kerbi Cabardo</p>
+      <p class="place">Liloan, Cebu</p>
+    </div>
+    <p class="intro">BS Information Technology graduate. I build web applications and study cybersecurity. Welcome to my portfolio.</p>
+    <div class="socials">
+      <a href="https://github.com/AdeptEagle" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.4 6.1-1.5 6.1-6.6a4.8 4.8 0 0 0-1.4-3.4 4.7 4.7 0 0 0-.1-3.4s-1.1-.3-3.5 1.4a12.3 12.3 0 0 0-6.2 0C6.5 2.1 5.4 2.4 5.4 2.4a4.7 4.7 0 0 0-.1 3.4A4.8 4.8 0 0 0 4 9.2c0 5.1 3.1 6.2 6.1 6.6a3.4 3.4 0 0 0-.9 2.6V22"/></svg>
+      </a>
+      <a href="mailto:kerbi2600@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14"/><path d="m4 7 8 6 8-6"/></svg>
+      </a>
+    </div>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2"/><path d="M5.2 19.2c1.3-3 3.7-4.5 6.8-4.5s5.5 1.5 6.8 4.5"/></svg>
+        About
+      </a>
+      <a href="#skills">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5"/><rect x="13.5" y="3" width="7.5" height="7.5"/><rect x="3" y="13.5" width="7.5" height="7.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5"/></svg>
+        What I do
+      </a>
+      <a href="#experience">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13"/><path d="M8 7V5.5A1.5 1.5 0 0 1 9.5 4h5A1.5 1.5 0 0 1 16 5.5V7"/></svg>
+        Experience
+      </a>
+      <a href="#projects">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7.5 12 3l9 4.5-9 4.5L3 7.5Z"/><path d="M3 12.5 12 17l9-4.5"/><path d="M3 16.5 12 21l9-4.5"/></svg>
+        Projects
+      </a>
+      <a href="#labs">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/></svg>
+        Labs
+      </a>
+      <a href="#credentials">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="m9 13.5-1 7 4-2 4 2-1-7"/></svg>
+        Credentials
+      </a>
+      <a href="#recognition">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v3a4 4 0 0 1-8 0V4Z"/><path d="M8 6H5.5v1.5a3 3 0 0 0 3 3"/><path d="M16 6h2.5v1.5a3 3 0 0 1-3 3"/><path d="M12 15v3M9 21h6"/></svg>
+        Recognition
+      </a>
+      <a href="#contact">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+        Contact
+      </a>
+    </nav>
+    <a class="hire" href="#contact">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 14-7-4 14-3.2-4.2L5 12Z"/></svg>
+      Hire Me
+    </a>
+    <button class="theme-row" id="theme-toggle" type="button" role="switch" aria-checked="false">
+      <span>Dark mode</span>
+      <span class="switch" aria-hidden="true"></span>
+    </button>
+  </aside>
+
+  <main id="main">
+    <div class="page">
+      <header class="hero" id="about">
+        <div class="hero-copy">
+          <p class="kicker">Information Technology</p>
+          <h1>Eirick Kerbi D. Cabardo</h1>
+          <p class="role">Full-stack development and cybersecurity</p>
+          <p>BS Information Technology graduate of Benedicto College (2022–2026), with full-stack experience in React, Next.js, NestJS, and PostgreSQL from projects and an on-the-job internship. Currently building a security background through TESDA training in cyber threat monitoring and hands-on labs with Wireshark, honeypots, Gophish, and incident response.</p>
+          <div class="actions">
+            <a class="btn" href="#projects">View Portfolio</a>
+            <a class="btn ghost" href="assets/docs/Cabardo_CV.pdf" download>View Resume</a>
+          </div>
+          <p class="open-note">Open to full-stack and cybersecurity roles · Cebu or remote</p>
+        </div>
+        <div class="portrait">
+          <div class="portrait-frame">
+            <img src="assets/images/Cabardo_portrait.jpg" alt="Eirick Kerbi D. Cabardo" class="portrait-img">
+          </div>
+        </div>
+      </header>
+
+      <section class="section" id="skills">
+        <h2>What I do</h2>
+        <p class="lede">Undergraduate work, an enterprise internship, and security training. These are the languages, tools, and practices I use. The <a href="assets/docs/Cabardo_CV.pdf" download>resume</a> and <a href="#projects">project portfolio</a> go further.</p>
+        <div class="skills">
+          <article class="skill">
+            <div class="mark" aria-hidden="true">JS</div>
+            <h3>Languages</h3>
+            <p>C++, JavaScript, TypeScript, HTML, and CSS.</p>
+          </article>
+          <article class="skill">
+            <div class="mark" aria-hidden="true">UI</div>
+            <h3>Frontend</h3>
+            <p>React, Next.js, and Bootstrap for interfaces and client-side structure.</p>
+          </article>
+          <article class="skill">
+            <div class="mark" aria-hidden="true">API</div>
+            <h3>Backend</h3>
+            <p>Node.js, NestJS, Next.js, and REST APIs.</p>
+          </article>
+          <article class="skill">
+            <div class="mark" aria-hidden="true">DB</div>
+            <h3>Data</h3>
+            <p>MySQL, PostgreSQL, and Prisma ORM.</p>
+          </article>
+          <article class="skill">
+            <div class="mark" aria-hidden="true">SEC</div>
+            <h3>Security</h3>
+            <p>Wireshark, Kali Linux, honeypots, Gophish, incident response, and cyber threat monitoring. Training and lab level.</p>
+          </article>
+          <article class="skill">
+            <div class="mark" aria-hidden="true">ANL</div>
+            <h3>Analytics</h3>
+            <p>Data analytics training, with Excel for working through datasets.</p>
+          </article>
+          <article class="skill">
+            <div class="mark" aria-hidden="true">GIT</div>
+            <h3>Tools</h3>
+            <p>Git, GitHub, Postman, and Arduino.</p>
+          </article>
+          <article class="skill">
+            <div class="mark" aria-hidden="true">PRO</div>
+            <h3>Practice</h3>
+            <p>Problem solving, communication, critical thinking, and staying effective under pressure.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <h2>Experience</h2>
+        <p class="lede">Enterprise web development during on-the-job training, working inside an existing financial system with a team.</p>
+        <div class="timeline">
+          <article class="job">
+            <h3>Intern (OJT)</h3>
+            <p class="org">Questnova IT Solutions</p>
+            <p class="meta">January 3, 2026 – March 30, 2026</p>
+            <ul>
+              <li>Developed and maintained mission-critical financial modules in an enterprise web application.</li>
+              <li>Executed end-to-end multilingual localization across different key modules.</li>
+              <li>Migrated data filtering from client-side to server-side processing, boosting query performance, scalability, and cross-module reliability.</li>
+              <li>Enhanced system resilience and navigation by optimizing search, routing, pagination, and edge-case null-value handling.</li>
+              <li>Delivered UI/UX and reporting enhancements, introducing status indicators, template actions, transaction overlays, and supplementary reporting columns.</li>
+              <li>Improved production stability via root-cause debugging, standardized exception handling, data validation, and collaborative version control management.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <h2>Projects</h2>
+        <p class="lede">School systems, research builds, and hardware projects I led from design through implementation.</p>
+        <div class="project-grid">
+          <article class="project">
+            <h3>Online Voting School System</h3>
+            <p class="role">Team Leader and Lead Fullstack Developer</p>
+            <p class="meta">June 2025 – November 2025</p>
+            <p class="summary">An undergraduate study that aims to improve the school’s manual voting process using mobile phones and school desktops.</p>
+            <div class="tags">
+              <span class="tag">NestJS</span>
+              <span class="tag">Prisma ORM</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+          </article>
+          <article class="project">
+            <h3>Arduino-Based Garbage Segregator</h3>
+            <p class="role">Project Manager and Lead Developer</p>
+            <p class="meta">January 2025 – February 2025</p>
+            <p class="summary">An Arduino-based machine that automatically sorts plastic, metal, and paper waste using sensor-based automation.</p>
+            <div class="tags"><span class="tag">Arduino</span></div>
+          </article>
+          <article class="project">
+            <h3>Smart Cane with GPS Tracker</h3>
+            <p class="role">Project Leader and Lead Developer</p>
+            <p class="meta">July 2024 – October 2024</p>
+            <p class="summary">A smart cane with GPS tracking and a beeper alert system to help visually impaired users with navigation and obstacle awareness.</p>
+            <div class="tags">
+              <span class="tag">Arduino</span>
+              <span class="tag">GPS</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="labs">
+        <h2>Cybersecurity Labs</h2>
+        <p class="lede">Hands-on lab work and cybersecurity activities. Includes reports, screenshots, and writeups from tools like Wireshark, Gophish, honeypots, and incident response exercises.</p>
+        <div class="lab-grid">
+          <article class="lab-card">
+            <button type="button" class="lab-preview lab-open" data-pdf="labs/activity-1-incident-reporting/activity-1.pdf" data-title="Activity 1: Incident Reporting" aria-label="Open Activity 1: Incident Reporting">
+              <img src="labs/activity-1-incident-reporting/thumb.png" alt="First page of the Activity 1 incident reporting document" loading="lazy">
+            </button>
+            <div class="lab-info">
+              <h3>Activity 1: Incident Reporting</h3>
+              <p class="meta">CTM1 · Incident ticketing</p>
+              <p>Three incident tickets covering a phishing email, a ransomware notice, and a suspicious foreign login, each with severity, symptoms, timeline, and scope.</p>
+              <div class="lab-links">
+                <button type="button" class="lab-open" data-pdf="labs/activity-1-incident-reporting/activity-1.pdf" data-title="Activity 1: Incident Reporting">View activity</button>
+              </div>
+            </div>
+          </article>
+          <article class="lab-card">
+            <button type="button" class="lab-preview lab-open" data-pdf="labs/activity-2-incident-report-sop/activity-2.pdf" data-title="Activity 2: Incident Report &amp; Corporate SOP" aria-label="Open Activity 2: Incident Report and Corporate SOP">
+              <img src="labs/activity-2-incident-report-sop/thumb.png" alt="First page of the Activity 2 incident report document" loading="lazy">
+            </button>
+            <div class="lab-info">
+              <h3>Activity 2: Incident Report &amp; Corporate SOP</h3>
+              <p class="meta">CTM1 · Incident report · SIEM (Splunk)</p>
+              <p>A full incident ticket for an Office365 credential-phishing compromise, with severity justification and immediate response actions, plus a ticket reconstructing the "I Remember It" shift-handoff failure.</p>
+              <div class="lab-links">
+                <button type="button" class="lab-open" data-pdf="labs/activity-2-incident-report-sop/activity-2.pdf" data-title="Activity 2: Incident Report &amp; Corporate SOP">View activity</button>
+              </div>
+            </div>
+          </article>
+          <article class="lab-card">
+            <button type="button" class="lab-preview lab-open" data-pdf="labs/activity-3-splunk-workbook/activity-3.pdf" data-title="Activity 3: Splunk Tier 1 SOC Student Workbook" aria-label="Open Activity 3: Splunk Tier 1 SOC Student Workbook">
+              <img src="labs/activity-3-splunk-workbook/thumb.png" alt="First page of the Splunk Tier 1 SOC Analyst student workbook" loading="lazy">
+            </button>
+            <div class="lab-info">
+              <h3>Activity 3: Splunk Student Workbook</h3>
+              <p class="meta">Splunk · BOTS v2 Attack-Only dataset</p>
+              <p>Tier 1 SOC analyst workbook covering Lessons 1–15 and Labs 1–10: SPL searches, field discovery, DNS, HTTP and network analysis, correlation, detections, triage, and incident reporting.</p>
+              <div class="lab-links">
+                <button type="button" class="lab-open" data-pdf="labs/activity-3-splunk-workbook/activity-3.pdf" data-title="Activity 3: Splunk Tier 1 SOC Student Workbook">View activity</button>
+              </div>
+            </div>
+          </article>
+          <article class="lab-card">
+            <button type="button" class="lab-preview lab-open" data-pdf="labs/activity-4-wireshark-intro/activity-4.pdf" data-title="Activity 4: Wireshark Intro" aria-label="Open Activity 4: Wireshark Intro">
+              <img src="labs/activity-4-wireshark-intro/thumb.png" alt="First page of the Wireshark for Cyber Threat Monitoring lab worksheet" loading="lazy">
+            </button>
+            <div class="lab-info">
+              <h3>Activity 4: Wireshark Intro</h3>
+              <p class="meta">Wireshark 4.6 · Day 1 lab worksheet</p>
+              <p>Hands-on packet analysis: live baseline capture, TCP handshake and HTTP tracing, display-filter hunting, a network baseline dossier, and a team challenge finding anomalies mapped to MITRE ATT&amp;CK.</p>
+              <div class="lab-links">
+                <button type="button" class="lab-open" data-pdf="labs/activity-4-wireshark-intro/activity-4.pdf" data-title="Activity 4: Wireshark Intro">View activity</button>
+              </div>
+            </div>
+          </article>
+          <article class="lab-card">
+            <button type="button" class="lab-preview lab-open" data-gallery="gallery-cowrie" data-title="Activity 5: Cowrie Honeypot Intro Demo" aria-label="Open Activity 5: Cowrie Honeypot Intro Demo">
+              <img src="labs/activity-5-cowrie-honeypot/thumb.png" alt="Cowrie honeypot log capturing a simulated SSH login" loading="lazy">
+            </button>
+            <div class="lab-info">
+              <h3>Activity 5: Cowrie Honeypot Demo</h3>
+              <p class="meta">Cowrie · Kali Linux · SSH honeypot</p>
+              <p>An introductory demo: starting a Cowrie SSH honeypot on Kali, confirming it is reachable, then simulating an intrusion from a Windows host and watching Cowrie log the login and commands.</p>
+              <div class="lab-links">
+                <button type="button" class="lab-open" data-gallery="gallery-cowrie" data-title="Activity 5: Cowrie Honeypot Intro Demo">View walkthrough</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="credentials">
+        <h2>Credentials</h2>
+        <p class="lede">Degree, certifications, and current training. Status is based on the training dates; ongoing modules are marked in progress.</p>
+        <article class="edu">
+          <p class="kicker">Education</p>
+          <h3>Bachelor of Science in Information Technology</h3>
+          <p>Benedicto College, Mandaue Campus</p>
+          <p class="meta">2022 – 2026 · 4th year graduate · A. S. Fortuna St.</p>
+        </article>
+        <h3 class="subhead">Certifications and training</h3>
+        <div class="filters" role="group" aria-label="Filter certifications by issuer">
+          <button type="button" data-cert-filter="All" aria-pressed="true">All</button>
+          <button type="button" data-cert-filter="Appkademiya" aria-pressed="false">Appkademiya</button>
+          <button type="button" data-cert-filter="TESDA" aria-pressed="false">TESDA</button>
+          <button type="button" data-cert-filter="Cisco" aria-pressed="false">Cisco</button>
+          <button type="button" data-cert-filter="Fortinet" aria-pressed="false">Fortinet</button>
+        </div>
+        <div class="cert-list" id="cert-list">
+          <article class="cert" data-issuer="Appkademiya" data-start="2026-11-12" data-end="2026-11-12">
+            <header>
+              <h3>Certified Cybersecurity Professional (CCP)</h3>
+              <span class="pill">Appkademiya</span>
+            </header>
+            <p class="meta">Appkademiya Cybersecurity Certification · Issued Nov 12, 2026</p>
+            <p class="meta wrap">CERT-CCP-CYBERSECURITY-PROFESSIONAL-20261112-02C6A01C810A</p>
+            <p><a href="https://appkademiya.online/verify/CERT-CCP-CYBERSECURITY-PROFESSIONAL-20261112-02C6A01C810A" target="_blank" rel="noopener noreferrer">Verify credential</a></p>
+          </article>
+          <article class="cert" data-issuer="TESDA" data-start="2026-10-26" data-end="2026-11-28">
+            <header>
+              <h3>Cyber Threat Monitoring Level I</h3>
+              <span class="pill">TESDA</span>
+            </header>
+            <p class="meta">GFG Assessment &amp; Training Center Corp. · Oct 26, 2026 – Nov 28, 2026</p>
+            <p class="meta">Certificate Code Here</p>
+          </article>
+          <article class="cert" data-issuer="Cisco" data-status="In progress">
+            <header>
+              <h3>Network Defense</h3>
+              <span class="pill">Cisco</span>
+            </header>
+            <p class="meta">Cisco · Ongoing module</p>
+          </article>
+          <article class="cert" data-issuer="Fortinet" data-status="In progress">
+            <header>
+              <h3>Fortinet NSE 1</h3>
+              <span class="pill">Fortinet</span>
+            </header>
+            <p class="meta">Fortinet NSE Training · Ongoing module</p>
+          </article>
+          <article class="cert" data-issuer="Fortinet" data-status="In progress">
+            <header>
+              <h3>Fortinet NSE 2</h3>
+              <span class="pill">Fortinet</span>
+            </header>
+            <p class="meta">Fortinet NSE Training · Ongoing module</p>
+          </article>
+          <article class="cert" data-issuer="Fortinet" data-status="In progress">
+            <header>
+              <h3>Fortinet NSE 3</h3>
+              <span class="pill">Fortinet</span>
+            </header>
+            <p class="meta">Fortinet NSE Training · Ongoing module</p>
+          </article>
+          <article class="cert" data-issuer="TESDA" data-start="2026-09-28" data-end="2026-10-30">
+            <header>
+              <h3>Data Analytics Level III</h3>
+              <span class="pill">TESDA</span>
+            </header>
+            <p class="meta">GFG Assessment &amp; Training Center Corp. · Sep 28, 2026 – Oct 30, 2026</p>
+            <p class="meta">Certificate Code Here</p>
+          </article>
+        </div>
+        <p class="status" id="cert-empty" hidden>No credentials in this view.</p>
+      </section>
+
+      <section class="section" id="recognition">
+        <h2>Recognition</h2>
+        <p class="lede">Awards, student leadership, and seminars from college.</p>
+        <div class="split">
+          <div>
+            <h3 class="subhead">Awards</h3>
+            <ul class="rows">
+              <li><div><strong>Best in Programming</strong><span>Benedicto College</span></div><time>2026</time></li>
+              <li><div><strong>Best Podium Presenter</strong><span>2nd Multidisciplinary Research Congress, Benedicto College</span></div><time>2025</time></li>
+              <li><div><strong>Best Research Paper</strong><span>2nd Multidisciplinary Research Congress, Benedicto College</span></div><time>2025</time></li>
+              <li><div><strong>President’s List</strong><span>Benedicto College</span></div><time>2025</time></li>
+              <li><div><strong>Director’s List</strong><span>Benedicto College</span></div><time>2024</time></li>
+              <li><div><strong>Honor’s List</strong><span>Benedicto College</span></div><time>2023</time></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="subhead">Leadership</h3>
+            <ul class="rows">
+              <li><div><strong>Department President</strong><span>College of Computer Studies, Benedicto College</span></div><time>2024–2025</time></li>
+              <li><div><strong>Supreme Student Council</strong><span>Benedicto College</span></div><time>2023–2024</time></li>
+            </ul>
+          </div>
+        </div>
+        <h3 class="subhead" id="seminars">Seminars and workshops</h3>
+        <div class="filters" role="group" aria-label="Filter seminars">
+          <button type="button" data-sem-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-sem-filter="security" aria-pressed="false">Security</button>
+          <button type="button" data-sem-filter="psite" aria-pressed="false">PSITE</button>
+        </div>
+        <p class="lede" id="sem-note" hidden>Philippine Society of Information Technology Educators (PSITE), Central Visayas Region.</p>
+        <ul class="rows" id="sem-list">
+          <li class="seminar" data-security="false" data-host="other">
+            <div>
+              <h3>2nd Multidisciplinary Research Congress: “Silver Milestone of Discovery: Bridging Disciplines, Building the Future”</h3>
+              <span class="where">Benedicto College Mandaue Campus, Artist Hall</span>
+            </div>
+            <time>Nov 21, 2025</time>
+          </li>
+          <li class="seminar" data-security="true" data-host="other">
+            <div>
+              <h3>Can You hackIT Challenge: IBPAP Hackathon <span class="pill">Security</span></h3>
+              <span class="where">Cebu Institute of Technology – University</span>
+            </div>
+            <time>Jul 17, 2025</time>
+          </li>
+          <li class="seminar" data-security="true" data-host="other">
+            <div>
+              <h3>Lig-Ong Apps, Protektadong Endpoint | Beyond Firewall: App &amp; Endpoint Security <span class="pill">Security</span></h3>
+              <span class="where">Seda Central Bloc Cebu</span>
+            </div>
+            <time>Jun 10, 2025</time>
+          </li>
+          <li class="seminar" data-security="false" data-host="other">
+            <div>
+              <h3>ORACLE: Redefine Best in a World of Change</h3>
+              <span class="where">NUSTAR Resort Cebu</span>
+            </div>
+            <time>May 15, 2025</time>
+          </li>
+          <li class="seminar" data-security="true" data-host="PSITE">
+            <div>
+              <h3>Empowering and Future Proofing Students through Cybersecurity and Research <span class="pill">PSITE</span></h3>
+              <span class="where">Recoletos Coliseum, USJ-R Basak Campus</span>
+            </div>
+            <time>May 7, 2025</time>
+          </li>
+          <li class="seminar" data-security="false" data-host="PSITE">
+            <div>
+              <h3>Navigating the Digital Frontier: Trust, Twins and Wellness in the Digital Age <span class="pill">PSITE</span></h3>
+              <span class="where">CITU, Cebu City</span>
+            </div>
+            <time>Mar 15, 2024</time>
+          </li>
+          <li class="seminar" data-security="false" data-host="PSITE">
+            <div>
+              <h3>Fortifying IT Education through Disruptive Innovation <span class="pill">PSITE</span></h3>
+              <span class="where">CTU Gym, Cebu City</span>
+            </div>
+            <time>Mar 21, 2023</time>
+          </li>
+        </ul>
+        <p class="status" id="sem-empty" hidden>No seminars in this view.</p>
+      </section>
+
+      <section class="section" id="contact">
+        <h2>Contact</h2>
+        <p class="lede">For a role, a project, or a question, use the form or write directly. The form opens your email app. Nothing is stored on this page.</p>
+        <div class="contact-grid">
+          <dl class="facts">
+            <div><dt>Email</dt><dd><span id="email">kerbi2600@gmail.com</span> <button class="copy" id="copy-email" type="button">Copy</button></dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+639277463330">+63 927 746 3330</a></dd></div>
+            <div><dt>Location</dt><dd>Tayud, Liloan, Cebu, Philippines</dd></div>
+            <div><dt>GitHub</dt><dd><a href="https://github.com/AdeptEagle" target="_blank" rel="noopener noreferrer">github.com/AdeptEagle</a></dd></div>
+            <div><dt>Resume</dt><dd><a href="assets/docs/Cabardo_CV.pdf" download>Download Resume</a></dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <footer class="colophon">
+        <p>© <span id="year">2026</span> Eirick Kerbi D. Cabardo</p>
+        <p>Tayud, Liloan, Cebu</p>
+      </footer>
+    </div>
+  </main>
+</div>
+
+<template id="gallery-cowrie">
+  <ol class="steps">
+    <li>
+      <h4>Step 1 · Start the honeypot</h4>
+      <a href="labs/activity-5-cowrie-honeypot/01-start-honeypot.png" target="_blank" rel="noopener noreferrer"><img src="labs/activity-5-cowrie-honeypot/01-start-honeypot.png" alt="Kali terminal showing cowrie start, ip a, and ss -tulnp output" loading="lazy"></a>
+      <p>In the Cowrie virtual environment, <code>cowrie start</code> launches the honeypot under twistd. <code>ip a</code> shows the Kali VM at 192.168.254.117, and <code>ss -tulnp</code> confirms twistd is listening on TCP port 2222, Cowrie's default fake-SSH port.</p>
+    </li>
+    <li>
+      <h4>Step 2 · Confirm it is reachable and logging</h4>
+      <a href="labs/activity-5-cowrie-honeypot/02-ping-and-log.png" target="_blank" rel="noopener noreferrer"><img src="labs/activity-5-cowrie-honeypot/02-ping-and-log.png" alt="Windows PowerShell pinging the honeypot beside a Cowrie log showing it ready to accept SSH connections" loading="lazy"></a>
+      <p>From the Windows host, PowerShell pings 192.168.254.117 with 4 of 4 replies and no loss. In a second terminal, <code>tail -f var/log/cowrie/cowrie.log</code> shows Cowrie 3.1.6 starting its SSH factory on port 2222 and reporting it is ready to accept SSH connections.</p>
+    </li>
+    <li>
+      <h4>Step 3 · Simulate an SSH intrusion</h4>
+      <a href="labs/activity-5-cowrie-honeypot/03-ssh-intrusion.png" target="_blank" rel="noopener noreferrer"><img src="labs/activity-5-cowrie-honeypot/03-ssh-intrusion.png" alt="PowerShell SSH session into the honeypot next to the Cowrie log recording the login and commands" loading="lazy"></a>
+      <p>The Windows host connects with <code>ssh -p 2222 root@192.168.254.117</code> and gets what looks like a Debian server (hostname <code>svr04</code>). It runs <code>uname -a</code> and <code>ls -la</code> against the emulated system. Cowrie's log records the new connection from 192.168.254.113, the client version string, the successful root login attempt, and each command typed.</p>
+    </li>
+  </ol>
+  <p class="gallery-note">Click any screenshot to open it full size. This was a controlled demo on my own lab network; the "attacker" was my own machine.</p>
+</template>
+
+<div class="modal" id="pdf-modal" role="dialog" aria-modal="true" aria-labelledby="pdf-title" hidden>
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3 id="pdf-title">Document</h3>
+      <div class="modal-actions">
+        <a id="pdf-newtab" href="#" target="_blank" rel="noopener noreferrer">Open in new tab</a>
+        <button type="button" id="pdf-close" aria-label="Close">Close</button>
+      </div>
+    </div>
+    <iframe id="pdf-frame" title="Document viewer"></iframe>
+    <div id="gallery-body" class="gallery" tabindex="0" hidden></div>
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
